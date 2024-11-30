@@ -294,23 +294,189 @@ Ans: Both Custom Settings and Custom Objects in Salesforce are used to store and
 
 		We can create maximum 100 fields inside the custom settings. and these dont have tab. We can manage data through dataloader or manage button in custom settings.
 
+62. What are differences between workflows and approval process?
+Ans: The key difference between workflows and approval process are as below Workflow rules consist of single step and a single action where as approval process has multiple steps and different actions. Workflow rules will triggered automatically. Approval process consit multiple steps each step required a specific Approve or reject user actions.
+
+63. What is the daily email alerts limit per standard salesforce license for workflow and approval process? And what is the overall daily organization limit? 
+Ans: Daily email alert for approval process and workflow are 5000 per standard salesforce license. Overall daily organization limit for workflow and approval process email alert is 2000000 (2 million).
+
+64. How many ways a field can be made mandatory?
+Ans: 		1. While creating the field
+			2. page layout
+			3. Validation rule
+			4. triggers
+			5. Visualforce pages
+
+65. What are trigger best practices?
+Ans:        1. Always bulkfy code
+			2. Avoid Soql and Dml statements inside the for loop.
+			3. Maintain only one trigger per an object.
+
+
+66. What are the difference between 15 digit id and 18 digit id? 
+Ans: Difference between 15 digit ID and 18 digit ID is, 15 digit id is case sensitive 18 digit id is case insensitive. Last 3 characters of the 18 digit id represent the checksum of the capitalization of the first 15 digits.
+
+67. What are different user licenses available in salesforce and explain them?
+Ans: Salesforce / standard / full licence -->
+	 Salesforce platform licence --->
+	 Customer community login licence -->
+	 Chatter free licence --> 
+
+68. What is traction workbench in salesforce? 
+Ans: Traction workbench is a salesforce feature for implementing the language in multiple languages. i.e not just the data but also all your configurations and customizations that you do as part of the implementation.
+
+69. What is workbench in salesforce?
+Ans: Salesforce Workbench is a free, web-based tool that can be used for data management activities such as bulk record updates, mass creation, and mass deletion. If you’ve ever used Data Loader or the Salesforce Data Import Wizard, it is similar to those tools.
+
+70. What is Data Loader and how many ways we can use Data Loader? 
+Ans: Data Loader is a client application, used for bulk import or export of data. Data Loader can be used in 2 ways. 1. User Interface 2. Command Line
+
+71. How many records we can insert using Data Loader? 
+Ans: We can insert up to 50 million i.e 5cr records using Data Loader.
+
+72. What are the objects supported by Data Loader? 
+Ans: Data Loader supports all objects including custom objects.
+
+73. How often do Salesforce update the software?
+Ans: In every 4 months salesforce provides new release with year number.
+	Winter release of 2023 --> Winter’23.
+	Spring release of 2022 --> Spring’22.
+	Summer release of 2024 --> Summer’24.
+
+74. Can I have custom development within the Salesforce.com platform?
+Ans: Yes, you can have custom development within the Salesforce.com platform! Salesforce is a highly customizable and extensible platform, You can build custom features, applications, and integrations in Salesforce using various technologies provided by the platform.
+
+75. Can I integrate my email from Outlook or other mail solutions?
+Ans: Yes, you can integrate your email from Outlook or other mail solutions with Salesforce. Salesforce provides several ways to integrate and sync email systems like Outlook, Gmail, and other email providers with your Salesforce environment.
+
+76. How easy is it to customize the environment to reflect the way my business works?
+Ans: We can customize salesforce as per our business works. Salesforce provides "Declaratice customizations" and "Programmatic customizations". We can create applications, tabs, objects, page layouts..etc as per business requirements.
+
+77. How much space do I get with Salesforce?
+Ans: Unlimited Edition provides 120gb of data and 120gb of file storage per user.
+
+78. Where is my data being stored?
+Ans: Depending on your geographical location, Salesforce.com will store your data in  North America or Europe or  Asia Pacific.
+
+80. Are there Apps that perform different functions and services in Salesforce.com? 
+Ans: Yes, Salesforce has its own marketplace with currently over 1500 cloud computing and business applications to download and install.
+
+81. What is the difference between Customer portal and Partner portal?
+Ans: 
+
+82. Give one example where you will use a trigger instead of a workflow?
+Ans: Workflow rules will get fired after insert and after update operations. If you want to fire before operations we have to use triggers.
+
+83. Explain the lead conversion process in salesforce?
+Ans: Whenever we convert the lead as a customer, salesforce will generate Account, Contact and Opportunity records by default.
+
+84. Dashboards cannot be created on which kind of Reports?
+Ans: We cannot create dashboard on tabular and joined reports.
+
+85. What is the difference between Task and Events?
+Ans: 
+
+86. What are person accounts?
+Ans: Search for option "Person Accounts". Person account are used to store the information of individual person by combining account and contact fields into single record. Once its enabled, it can't disabled again. 
+
+87. What are system fields? Can you name some of them?
+Ans: 1. Id
+	 2. formula
+	 3. Rollup summary.
+	 4. CreatedBy
+	 5. LastodifiedBy
+	 6. Auto Number.
+
+88. What is Mini page layout?
+Ans: Whenever we are placing the mouse over the record, it will popup and show required information. That popup is called as mini pagelayout. The required fields are included in minipagelayout by default and cannot be removed.
+
+89. What is Customer Relationship Management (CRM)?
+Ans: CRM is used to automate the sales, service, marketing business processes at one place and crm helps us for managing the company relationships and interactions with the customers.
+
+90. Do I need to install anything on my workstation(s) to use Salesforce.com?
+Ans: No, salesforce is cloud based crm, we can access all the features and functionalities with the help browser and internet access.
+
+91. What happens if I find a fault in Salesforce.com?
+Ans: If you encounter a fault in Salesforce, you should first try to identify the issue, then contact Salesforce Support via their Help & Training portal, providing as much detail as possible.
+
+92. Can I use my existing applications in conjunction with Salesforce.com?
+Ans: Yes, you can integrate and use your existing applications in conjunction with Salesforce.com. Salesforce is designed to be flexible and can integrate with a wide variety of third-party applications, systems, and databases.
+
+93. What is a Lead?
+Ans: The person/org who just showed interest on the product or service.
+
+94. What is a Contact?
+Ans: Contact record contains contact information of the person. like firstname, lastname, title, dob, department, Phone, fax...etc.
+
+95. Explain Lead conversion?
+Ans: Whenever we convert the lead as a customer, salesforce will generate Account, Contact and Opportunity records by default.
+
+96. What is a Web-to-Lead?
+Ans: By using web-to-lead feature we can capture the leads from the company website.
+
+97. What is an Auto-Response Rule?
+Ans: Auto response rules especially configured for Web to lead and web to case. Auto response rules are used to send response email notifications back to the people.
+
+98. What is a Case?
+Ans: Case is nothing but detail description of the problem , customer facing with our product or service.
+
+99. What is a Case Queue?
+Ans: Queue is nothing but a location where a group of records await inside until any one of the queue members accept it. In case queue only case records are awaiting to accept.
+
+100. What is a Case Assignment Rule?
+Ans: Assignment rules are only available for lead and case by default. Assignment rules are used to transfer the record ownership to queue automatically.
+
+101. What is Web-to-Case?
+Ans: By using web-to-case feature we can capture the cases from the company website.
+
+102. What is Email-to-Case?
+Ans: Once an email has been received then automatically convert that email as a case record. “Email subject” will be store in “Case Subject” and “Email content” will be store in “Case Description” fields automatically.
+
+103. What is an Escalation Rule?
+Ans: Escalation rules are rules, automatically escalates an unresolved Case within a certain period of time  (age over).
+
+104. What are Business Hours? 
+Ans: Business hours are organization’s hours of operation.
+
+105. What is a Solution?
+Ans: Detail decription of resolution of case.
+
+106. What is the Self-Service Portal? 
+Ans: Self service portal is an authenticated portal which provides 24/7 online support and contains Public Knowledge Base, Suggested Solutions and Web-to-Case functionality.
+
+107. What is the AppExchange? 
+Ans: AppExchange is like a playstore or app store, which enables Partners and Customers to Download & Install Custom Apps and Components as per the need. 
+
+108. Jump Start Wizard vs. Standard Wizard ?
+Ans: The Jump Start wizard creates a one-step approval process for you in just a few minutes. The Standard Wizard is useful for complex approval processes.
+
+109. Parallel Approval Routing ? 
+Ans: Parallel Approval Routing is sending approval requests to multiple approvers in a single step, Wait for approval from all the approvers or  any one. Configure 25 parallel approvers at each step.
+
+116. What are Trend Reports? 
+Ans: Trend reports are reports built on the data specified over a period of time.
+
+
+118. What are Custom Report Types?
+Ans: Custom Report Types in Salesforce allow you to create personalized and specialized report structures to your specific business needs. 
+
+119. What is Conditional Highlighting?
+Ans: Conditional highlighting is used to highlight the summary and matrix reports rows, We can use up to 3 conditions maximum per report to highlight.
 
 
 
-fgdhfdjhjgfjtryedgdfhfgjghfjfghdfghj
 
-fgdfsgd
-dfg
-dfg
-dfg
-dfg
-dfg
-df
-gd
-fg
-dfgd
-fsg
-dfg
+
+
+
+
+
+
+
+
+
+
+
 
 
 
