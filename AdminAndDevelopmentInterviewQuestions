@@ -1,0 +1,299 @@
+Admin and Development Interview Questions:
+===========================================
+
+1. What is App in Sales force?
+Ans: Application contains collection of tabs, objects, page layouts etc. Which is used to manage the data related to the business. Salesforce provides 2 types of applications i.e Standard application and Custom application.
+
+2. What is object in Sales force?
+Ans: Object is nothing but a table inside the database. Which is used to store the data related to the business in the form records(rows and columns). Salesforce provides 2 types of objects i.e Standard objects and Custom Objects.
+
+3. How many relationships included in SFDC & What are they?
+Ans: 		1. Lookup relationship
+			2. Master-Detail relationship
+			3. External-Lookup relationship
+			4. Hierarchical relationship
+			5. Many to Many relationship
+			6. One to One relationship.
+
+4. What is a “Lookup Relationship”?
+Ans: It is a relationship which is used to connect the 2 objects.
+		1. Lookup is one to many relationship.
+		2. We can create lookup even object have pre-exist child records.
+		3. While creating the child record lookup is optional field.
+		4. When parent record is deleted, child record still exist as it is and lookup field value is cleared out.
+		5. Re-parent option is enabled by default.
+		6. We can make the lookup field mandatory by using required checkbox.
+		7. Parent and child records are independent, both records have its own owner field.
+		8. We can't create rollup summary in lookup.
+		9. lookup supports c-c, s-s, s-c, c-s.
+		10. we can create max 40 lookup fields.
+		11. If this field is mandatory field and its associated with child record then we can't remove them.
+
+5. What is “Master-Detail Relationship”?
+Ans: It is a relationship, which is used to connect two objects.
+		1. m-d is one- many relationship.
+		2. We can't create md, if the object the have pre-existed child records.
+		3. While creating the child record, md is a mandatory field.
+		4. When parent record is deleted, all associated child records also get deleted.
+		5. Re-pareting is not possible directly, we have to enable that option manually.
+		6. sharing settings and security settings are depending on the parent object.
+		7. child record dont have owner field, parent owner became the owner of the child record.
+		8. We can create rollup summary on md
+		9. We can create max 2 md.
+		10. md supports only s-c, s-s.
+
+6. How can I create Many – to – Many relationship?
+Ans: If the objects have one to many relationship from both the sides is called as many - many relationship. In salesforce many to many relationship is not possible directly. We need a junction object. This junction object must associated with master-detail relationship with both the objects.
+
+7. A custom object contains some records, now my requirement is to create field in this object with master detail relationship. Can we create master detail relationship in this case?
+Ans: No, We cannot create master detail relationship if the object have pre-existed child records inside it.
+
+8. List examples of custom field types?
+Ans: Fields types are nothing but data types. In salesforce we have 25 datatypes where 19 datatypes are 	
+ 	  common datatypes and 4 datatypes are related to relationships, 1 is formula and another 1 is rollup summary.
+ 	  	1. text								14. url
+ 	  	2. text area						15. phone
+ 	  	3. text area long 					16. percent
+ 	  	4. text area rich					17. currency
+ 	  	5. text encrypted					18. geo location
+ 	  	6. number							19. auto number
+ 	  	7. date 							20. lookup ralationship
+ 	  	8. time 							21. master-detail ralationship
+ 	  	9. dateTime 						22. external lookup relationship
+ 	  	10. checkbox 						23. hierarchical relationship
+ 	  	11. picklist 						24. formula
+ 	  	12. picklistMultiSelect 			25. rollup summary
+ 	  	13. email
+
+9. What is TAB in Salesforce?
+Ans: Tab is a collection of graphical user interfaces, which is used to manage the records inside the associated object.
+		salesforce provides
+				1. Custom objects tab
+				2. Web tab
+				3. Visualforce tab
+				4. Lightning page tab
+				5. Lightning component tab
+
+10. Does user can create insert their own custom logo, while creating their own custom applications?
+Ans: Yes, user can create their own custom application with his custom logo.
+
+11. List things that can be customized on page layouts?
+Ans: Page layout is a user interface which is used to perform the DML operations. By using page layout we can customize different things like arranging Fields, Buttons, Custom Links and Related Lists. We can also create sections ..etc
+
+12. What is a “Self Relationship”?
+Ans: Self relationship is also called as "Hierarchical Relationship". If the parent record and child record both are available in the same object is called as self relationship.
+
+13. What are the main things need to consider in the “Master-Detail Relationship”?
+Ans: We can't create if records existed, record level access depends on parent, its a mandatory field, cascade deleting.
+
+14. What is difference between trigger and workflow?
+Ans: Workflow rule - Workflow is a automation rule which is used to automate the business processes. It can automate very basic and simple actions. These rules get fired after "Insert" and after "Update" event.
+Trigger - Trigger is nothing but the custom apex code , which will get executed automatically based on DML events. Trigger can fire before and after event. By using triggers we can implement complex functionality.
+
+15. What is Wrapper class? 
+Ans: Wrapper class is class, it contains collection of other objects as members.It is used to display different objects on a Visual Force page in same table.
+
+16. What is Difference between SOQL and SOSL?
+Ans: SOQL stands for Salesforce object query language , which is used to fetch the records from the multiple objects. Soql query stats with SELECT keyword and we can use soql query in classes and triggers.We can perform dml operations on query result. SOSL stands for salesforce object search language, which is used to search the records in multiple objects at a time. SOSL query starts with FIND keyword. We can't use sosl in triggers. We can't perform any dml operations on sosl query result.
+
+17. What is difference insert() and database .insert() ?
+Ans: Both are used to perform the dml operations. Database.Insert statement supports patial processing mechanism that means while inserting the bulk records, if any record insertion is failed, it will skip that record and continue to insert other records. and also we can track failed records. Insert statement don't support partial processing mechanism, if any record insertion is failed, it will stop execution and remove all inserted records.
+
+18. What is Static Resources?
+Ans: Static resources are used to store different file types i.e images, text, pdf, html, css, doc.. etc. The maximum size of Static Resources for an organization is 250mb.
+
+20. What is sharing rule?
+Ans: Sharing rules are used to share the records to other users either based on criteria or ownership.
+
+21. How many ways we can share a record?
+Ans: 	1. Role hierarchy
+		2. OWD
+		3. Manual sharing.
+		4. Automation sharing (sharing rules)
+		5. Apex sharing.
+
+22. What are the actions in workflow?  
+Ans: By using workflow we can perform
+		1. Send email alert
+		2. Update field
+		3. Create task
+		4. Outbound messages
+
+23. How many ways we can made field is required?
+Ans: 	1. While creation of field.
+		2. By using page layout.
+		3. Validation rule
+		4. triggers
+		5. Visualforce pages
+
+24. What is difference between Role and Profile?
+Ans: Through the Profiles we can grant the permissions on applications, tabs, objects, fields, page layout,like that so many.But through Role we can grant the permission only on Records not on applications, tabs, objects..etc. Roles will purely granting the access on “Record Level Visibility”.
+
+25. What is the maximum size of the PDF generated on visualforce attribute renderAs?
+Ans: 15mb
+
+26. How many controllers can be used in a visual force page? 
+Ans: Salesforce comes under SAAS so, we can use one controller and as many extension controllers.
+
+27. What is difference between Action support and Action function?
+Ans: Action function --> Invoke the controller method from java script using ajax. and we can use action function from different places on visualforce page.
+Action support --> Invoke the controller method from java script using ajax when event occurs on the page like onMouseOver, onClick, ect… and we can use action support for particular single apex component.
+
+28. How many ways we can call the Apex class? 
+Ans: 	1. Visualforce page 
+		2. Web Service 
+		3. Triggers 
+		4. Email services
+
+29. How to create Master Details relationship between existing records?
+Ans: We can't create master detail relationship if object have pre-existed records. First we  have create lookup relationship and map all child records with parents then convert lookup data type to master detail.
+
+30. What is permission set?
+Ans: PermissionSet contains collection of permissions that can be assigned to one / more user in the organization. By using the permissionSets we can grant all the permissions like profiles except "Login Hours and Login ip ranges". PermissionSets are used to extends the profile level permissions to the users.
+
+31. What is manual sharing?
+Ans: Manual sharing is to share a record to a particular user manually. Manual Sharing button enables only when OWD is private to that object.
+
+32. How we can change the Grant access using role hierarchy for standard objects?
+Ans: For standard objects this is fixed, In custom objects we can disable.
+
+33. What is the use of “Transfer Record” in profile?
+Ans: If user have only Read access on particular record but he wants to change the owner of that record, then in his profile level he msut have Transfer Record permission.
+
+34. What is Field dependency?
+Ans: Field dependency means one picklist value is depending upon another picklist value.
+
+35. Is check box performs like controlling field?
+Ans: Yes possible. Controlling field should be Check box or picklist.
+
+36. How many field dependencies we can use in Visual Force page?
+Ans: Maximum we can use 10 field dependencies in VF page.
+
+37. What is Roll-up summary?
+Ans: Summarize the child object records based on the parent id, and apply the rollup types and display the result on the parent object.
+
+38. How to create Roll-up summary field on lookup relation? 
+Ans: Not possible. We can't create rollup summary on lookup relationship.
+
+39. What are the Record Types?
+Ans: It is used to display different picklist values  to the different users.
+
+40. What is Audit Trail? 
+Ans: Audit Trail provides the information or track all the recent setup changes that an administrator done to the organization. This can store the last 6 months data.
+
+41. What are the Report Types? 
+Ans: 4 Types of report in Salesforce        
+		1. Tabular Reports: We can only displays the grand total in the table form.         
+		2. Summary Reports: It is a detail form of report in which the grouping done based on Columns.       3. Matrix Reports: It is a detail form of report in which the grouping done based on both Rows and Columns.        
+		4. Joined Reports: We can join the two or more reports in the single report displayed in the form of blocks.
+
+42. What is Dashboard? 
+Ans: Dashboard is a pictorial representation of report. We can add up to 20 dashboard components in single dashboard. 
+
+43. What is the relationship between Contact and Account objects in salesforce?
+Ans: Contact and account objects having lookup relationship with additional behaviour.
+
+44. What are different Organization Wide Defaults?
+Ans:  	1. Private
+		2. Public Read Only
+		3. Public Read/Write
+		4. Public Read/Write/Transfer
+		5. Public Full Access
+		6. No Access
+		7. View Only
+		8. Use
+		9. Controlled by Parent.
+
+45. Is it mandatory to select User License while creating permission sets? If not, what is the significance of selecting a User License? 
+Ans: It is not mandatory to select a User License while creating a permission sets. If users with same type of license will use this permission set, then choose the same license that’s associate with them. If you are planning to assign this permission set to multiple users with different licenses then, choose none. 
+
+46. Can we create a new profile without cloning an existing profiles? 
+Ans: No, we have to clone any one of the existing profiles to create a new profile.
+
+47. Please explain the use of Grant Access Using Hierarchies?
+Ans: Once we configure objects owd as private then only record owner and his manager can get full control of that record.When we share the record to any other user, Grant access using hierarchy will give the access tp other user's manager also. If you want to restrict we have disable this feature.
+
+49. What is the batch size limit (increment size for batch) in Data Loader?
+Ans: Data loader support 2 api i.e apex api and bulk api.
+		Apex api: 
+					min : 1
+					max : 2000
+					default: 200
+
+		Bulk api:
+					min : 1
+					max : 10000
+					default: 2000
+
+50. What is the difference between Export and Export All in the context of Data Loader?
+Ans: Export operation will export all the records available in the object. Export all operation will export all the available record in the object and recycle bin.
+
+51. What are the post refresh considerations?
+Ans: 
+
+52.What is the storage limit of Full Copy, Configuration Only(Developer pro) and Developer sandboxes?
+Ans: Full copy sandbox --> has the same file and data storage limit as your production organization. 
+Partial copy sandbox --> has 5gb data storage and same as production file storage.
+Developer pro sandbox --> has 1gb file storage and 1gb data storage.
+Developer sandbox --> has 200mb file storage and 200mb data storage.
+
+53. What is the interval of refreshing of Full Copy, Configuration Only and Developer sandboxes?
+Ans: Full copy sandbox --> 29 days
+	 Partial copy sandbox --> 5 days
+	 Developer pro sandbox --> 1 day
+	 Developer sandbox --> 1 day
+
+54. What are the default sharing settings?
+Ans: Default sharing settings are as follows 
+			1. Controlled By Parent 
+			2. Private 
+			3. Public Read Only 
+			4. Public ReadWrite 
+			5. Public Read/Write/Trfer (Only for Case and Lead objects) 
+			6. Public Full Access (Only for Campaign object) 
+			7. No access
+			8. View only
+			9. Use
+
+55. How many roles we can create for an organization? 
+Ans: We can create up to 500 roles for an organization 
+
+56. How many permission sets we can create for an organization? 
+Ans: We can create up to 1000 permission sets for an organization
+
+57. How many types of custom tabs are available in salesforce?
+Ans: There are 5 custom tabs are available
+			1. Custom object tab
+			2. Web tab
+			3. Visualforce tab
+			4. Lightning page tab
+			5. Lightning component tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
