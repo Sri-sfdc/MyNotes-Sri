@@ -18,7 +18,7 @@ Ans: 		1. Lookup relationship
 4. What is a “Lookup Relationship”?
 Ans: It is a relationship which is used to connect the 2 objects.
 		1. Lookup is one to many relationship.
-		2. We can create lookup even object have pre-exist child records.
+		2. We can create loopup even object have pre-exist child records.
 		3. While creating the child record lookup is optional field.
 		4. When parent record is deleted, child record still exist as it is and lookup field value is cleared out.
 		5. Re-parent option is enabled by default.
@@ -269,6 +269,30 @@ Ans: There are 5 custom tabs are available
 			4. Lightning page tab
 			5. Lightning component tab
 
+58. How many Master-Detail relationships is allowed for an Object? 
+Ans: We can create maximum of two master-detail relationships per an object and Organization wide maximum 40 relationships.
+
+59. How many criteria based sharing rules is allowed for an Object? 
+Ans: Salesforce supports maximum 300 sharing rules per an object but among them minimum 50 should be criteria based sharing rules. 
+
+60. How many days the deleted data will be reside in recycle bin? 
+Ans: Deleted date will be stored in recycle bin for 15 days.
+
+61. What are differences between custom settings and custom objects?
+Ans: Both Custom Settings and Custom Objects in Salesforce are used to store and manage data, but they have some different functionalities. 
+	Custom object --> Custom objects are used to store data related to the business. we have to write soql query to fetch the records from custom object. If number of soql queries are increased it will impact the application performance.
+	Custom settings --> Custom settings is nothing but a location or a repository where we can store the static data i.e fixed data (ex: country codes, country names, postal codes etc). Custom settings speciality is without writing any soql query we can fetch the data from custom settings.
+		Salesforce provides 2 custom settings:
+			1. List custom settings --> whatever the data stored inside the List Custom settings it can be accessible by anybody within the organization.
+
+			2. Hierarchy custom settings --> Whatever the data stored inside the Hierarchy custom settings, we can restrict the data based on User level and based on profile level.
+
+	 	Salesforce provide 3 ready made methods to fetch data.
+			1. GetAll()
+			2. GetInstance()
+			3. Get values()
+
+		We can create maximum 100 fields inside the custom settings. and these dont have tab. We can manage data through dataloader or manage button in custom settings.
 
 
 
